@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="fonts/fontawesome-free-6.1.2-web/css/all.min.css">
+    <link rel="stylesheet" href="fonts/poppins/poppins.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/reset.css">
+
+    <script type="module" src="./js/components/li-menu.js"></script>
+    <script type="module" src="./js/components/info-profile.js"></script>
+    <script type="module" src="./js/components/about-me.js"></script>
+    <script type="module" src="./js/components/p-info.js"></script>
+    <script type="module" src="./js/components/li-hobbie.js"></script>
+
+    <title>Web Components</title>
+
+</head>
+<body>
+
+    <div class="layout-container">
+
+        <!-- Main navigation menu -->
+        <header class="main-navigation">
+            <menu class="option-list">
+                <!-- The custom component <li-menu> used is made for implement the icons of bootstrap icons only
+                    is necesary add corresponding class inside the property 'classIcon'.
+                -->
+                <li-menu dirHref="index.html" classIcon="bi bi-house-door-fill" nameTitle="Inicio" showTitle="true"></li-menu>
+                <li-menu dirHref="https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin" classIcon="bi bi-mortarboard-fill"  nameTitle="Estudios" showTitle="true"></li-menu>
+                <li-menu dirHref="https://github.com/johnnydldev" classIcon="bi bi-briefcase-fill" nameTitle="Portafolio" showTitle="true"></li-menu>
+                <li-menu dirHref="https://www.infojobs.net/candidate/cv/view/index.xhtml" classIcon="bi bi-person-rolodex" nameTitle="Contacto" showTitle="true"></li-menu>
+            </menu>
+        </header>
+
+        <!-- The custom component <info-profile> allow you embed still three links of social media
+            because implement the slot html element.
+        -->
+
+        <main class="info-profile-container">
+            <info-profile srcImg="./img/image-profile.jpeg" infoImg="Foto de usuario" namePerson="Jonathan Delgado" profPerson="Desarrollador web" srcFile="./files/Curriculum vitae.pdf" >
+                <li-menu slot="one-network" id="youtube" dirHref="https://www.youtube.com/channel/UCvIVw-bBZFQSsxVpM4E5e_Q" classIcon="bi bi-youtube" showTitle="true" fontSizeLink="4rem"></li-menu>
+                <li-menu slot="two-network" id="linkedin" dirHref="https://www.linkedin.com/in/jonathan-delgado-9690b9253/" classIcon="bi bi-linkedin" showTitle="true" fontSizeLink="4rem"></li-menu>
+                <li-menu slot="three-network" id="instagram" dirHref="https://www.instagram.com/johnnydldev/" classIcon="bi bi-instagram" showTitle="true" fontSizeLink="4rem"></li-menu>
+            </info-profile>
+        </main>
+        
+        <aside>
+            <about-me id="aboutme" mainTitle="Lo que hago">
+                <p-info id="infoPrincipal" 
+                slot="about-me" 
+                classIcon="bi bi-person-vcard" 
+                titleInfo="Acerca de Mi"
+                textInfo="Soy ingeniero en entornos virtuales y negocios digitales. Ademas un entusiasta y apasionado de la tecnología. 
+                Desarrolle un punto de venta mediante el lenguaje de programación C#, el cual es una aplicación de escritorio, que emplea 
+                una base de datos SQL administrada por el sistema workbench de MySQL. Conozco los ciclos de vida de los proyectos evolutivos 
+                e incrementales, así como las metodologías de desarrollo agiles SCRUM y Kanban."></p-info>
+                <li-hobbie id="oneHobbie" slot="hobbies" tHobbie="Leer" aHobbie="Cuentos, revistas academicas, ciencia, tecnología, ficción.">
+                    <li-hobbie id="twoHobbie" slot="additional" tHobbie="Escuchar música" aHobbie="Baladas, banda (norteña), rap, hiphop, indie.">
+                        <li-hobbie id="threeHobbie" slot="additional" tHobbie="Ejercicio" aHobbie="Calistenia, gimnasia, yoga.">
+                            <li-hobbie id="fourHobbie" slot="additional" tHobbie="Ajedrez" aHobbie="Realizar partidas y tomar lecciones en linea, jugar contra el pc.">
+
+                            </li-hobbie>
+                        </li-hobbie>
+                    </li-hobbie>
+                </li-hobbie>
+                <p-info id="xpInfo" slot="experience" 
+                classIcon="bi bi-code-slash" 
+                titleInfo="Experiencia" 
+                textInfo="He trabajado con los lenguajes de programación Java, Javascript, C#, Haskell y R, el lenguajes de marcado 
+                HTML5 y CSS. Bases de datos sql como MySQL, SQL Server y nosql como Mongo DB y firebase. Lit element tecnológia para 
+                crear componentes web. Además de la tecnológia Spring boot."></p-info>
+                <p-info id="edInfo" slot="education" 
+                classIcon="bi bi-journal-bookmark-fill" 
+                titleInfo="Educación" 
+                textInfo="Estudie en la universidad tecnológica de León la ingenieria de entornos virtuales y 
+                negocios digitales. En el transcurso de la formación curse materias como progración, bases de datos, 
+                gestión de equipos de alto rendimiento, redes de computadoras, animación, modelado digital."></p-info>
+            </about-me>
+        </aside>
+        
+    </div>
+
+</body>
+</html>

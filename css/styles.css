@@ -1,0 +1,105 @@
+/*DEFINICION DE VARIABLES*/
+:root{
+    /*Colores de la paleta
+        #6DA5C0
+        #294D61
+        #0F969C
+    */
+    --color-principal: #072E33;
+    --color-secundario: #05161A;
+
+    --color-background: #6DA5C0;
+    --color-transparent: transparent;
+
+    --color-icon: #B5B6B7;
+    --color-titles: #fcf7f7;
+    --color-subtitle: #888;
+    --color-text: #555;
+}
+
+/*ESTILOS GENERALES*/
+html{
+    font-size: 10px;
+}
+
+body{
+    width: 100%;
+    height: auto;
+    font-family: "Poppins", helvetica, sans-serif;
+    font-size: 1.5rem;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    overflow: hidden; 
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-titles);
+}
+
+/*IMAGEN DE FONDO*/
+body{
+    background-image: url("../img/fondo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -128px -128px;
+}
+
+/*ESTRUCTURA PRINCIPAL*/
+
+
+/*MENU NAVEGACION*/
+
+.main-navigation{
+    display: flex;
+    background-color: #072E33;
+    justify-content: center;
+}
+
+.option-list{
+    width: fit-content;
+    margin: 10px;
+}
+
+#youtube:hover{
+    background-color: #F50100;
+    border-radius: 10px;
+}
+
+#linkedin:hover{
+    background-color: #006296;
+    border-radius: 10px;
+}
+
+#instagram:hover{
+    background: linear-gradient(45deg,#F08722, #5B3AC1);
+    border-radius: 10px;
+}
+
+header{
+    grid-area: nav;
+}
+
+main{
+    grid-area: perfil;
+    margin: 10px;
+}
+
+aside{
+    border-color: solid #fcf7f7;
+    grid-area: about;
+    margin: 10px;
+}
+
+.layout-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px 100px;
+    grid-template-areas:
+    "nav nav nav"
+    "perfil about about"
+    "perfil about about";
+    
+}
+
+
