@@ -19,7 +19,7 @@ p{
     margin-left: 10px;
 }
 
-h1{
+h2{
     margin-left: 10px;
 }
 
@@ -39,7 +39,7 @@ i{
 <div class="p-info-container">
     <div class="title-container">
         <i id="icon"></i>
-        <h1 id="title"></h1>
+        <h2 id="title"></h2>
     </div>
     <p id="text"></p>
 </div>

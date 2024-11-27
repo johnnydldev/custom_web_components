@@ -63,6 +63,9 @@ template.innerHTML = `
     <section id="sn-hobbies">
         <h2>Hobbies</h2>
         <slot name="hobbies"></slot>
+        <slot name="hobbiesTwo"></slot>
+        <slot name="hobbiesThree"></slot>
+        <slot name="hobbiesFour"></slot>
     </section>
 
     <div class="formation-container">

@@ -23,6 +23,7 @@ strong{
 strong:hover{
     background-color: #e76f51;
 }
+    
 </style>
 
 <div class="hobbies-container">

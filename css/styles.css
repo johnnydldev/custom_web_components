@@ -15,6 +15,7 @@
     --color-titles: #fcf7f7;
     --color-subtitle: #888;
     --color-text: #555;
+    --color-background-profile: #072E33;
 }
 
 /*ESTILOS GENERALES*/
@@ -52,7 +53,7 @@ body{
 
 .main-navigation{
     display: flex;
-    background-color: #072E33;
+    background-color: var(--color-background-profile);
     justify-content: center;
 }
 
@@ -94,7 +95,6 @@ aside{
 .layout-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 100px 100px;
     grid-template-areas:
     "nav nav nav"
     "perfil about about"
